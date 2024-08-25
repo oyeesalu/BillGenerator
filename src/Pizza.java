@@ -20,30 +20,29 @@ public class Pizza {
         basePizzaPrice = this.price;
     }
     public void addExtraCheese() {
-        System.out.println("Extra cheese added");
+        isExtraCheeseAdded = true;
         this.price += extraCheese;
 
     }
     public void addExtraToppings() {
-        System.out.println("Extra toppings added");
+        isExtraToppingsAdded = true;
         this.price += extraToppings;
     }
     public void takeAway() {
-        System.out.println("Take away opted");
+        isTakeAwayOpted = true;
         this.price += bagPack;
     }
     public void generateBill() {
         String bill = "";
-        System.out.println(this.price);
         System.out.println("Base :" + basePizzaPrice);
         if (isExtraCheeseAdded) {
-            bill += "Extra Cheese Added" + extraCheese + "\n";
+            bill += "Extra Cheese :" + extraCheese + "\n";
         }
         if (isExtraToppingsAdded) {
-            bill += "Extra Toppings Added" + extraToppings + "\n";
+            bill += "Extra Toppings :" + extraToppings + "\n";
         }
         if (isTakeAwayOpted) {
-            bill += "BagPack included" + bagPack + "\n";
+            bill += "BagPack included..." + bagPack + "\n";
         }
         bill += "BILL :" + this.price + "\n";
         System.out.println(bill);
